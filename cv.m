@@ -12,16 +12,16 @@ function [val,stats] = cv(x)
 % val = cv(x)
 % Written by Tutku Oztel, 03.08.2018
 
-if isvector(x) == true
-val = std(x)/mean(x);
-stats.std = std(x);
-stats.mean = mean(x);
-elseif isvector(x) == false
-    error('Shit has to be a vector.');
-elseif nargin < 1
-    error('we need more input');
-elseif nargin > 1 
-    error('we are good with less input.');
-end
+    if isvector(x) == true
+     val = std(x)/mean(x);
+     stats.std = std(x);
+     stats.mean = mean(x);
+        elseif isvector(x) == false
+        error('Shit has to be a vector.');
+        elseif nargin < 1
+        error('we need more input');
+        elseif nargin > 1 
+        error('we are good with less input.');
+    end
 end
 
