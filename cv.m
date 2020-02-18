@@ -17,11 +17,7 @@ function [val,stats] = cv(x)
      stats.std = std(x);
      stats.mean = mean(x);
         elseif isvector(x) == false
-        error('Shit has to be a vector.');
-        elseif nargin < 1
-        error('we need more input');
-        elseif nargin > 1 
-        error('we are good with less input.');
+        error('Input has to be a vector.');
     end
 end
 
